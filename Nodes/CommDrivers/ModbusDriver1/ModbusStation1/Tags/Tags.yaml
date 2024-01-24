@@ -1,0 +1,13 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: ModbusTag1
+  Id: g=3b393e14b55855f8382e7a6572c306c3
+  Type: ModbusTag
+  DataType: Int16
+  Value: 0
+  Children:
+  - Name: ArrayUpdateMode
+    Type: BaseDataVariableType
+    DataType: TagArrayUpdateMode
+    Value: 1

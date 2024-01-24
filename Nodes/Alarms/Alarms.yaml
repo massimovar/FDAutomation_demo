@@ -1,0 +1,680 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: ImportAndExportAlarms
+  Id: g=4a6620a90d54c97eba7fa198ec1011e2
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=560b350d6102140de844c62f366becfc
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ImportAlarms
+    Id: g=02e67b1edaf5b1f13377097b968dfbac
+  - Class: Method
+    Name: ExportAlarms
+    Id: g=ba98a38d632b869cb6b42cec13a26188
+  - Name: CSVPath
+    Id: g=dfd5144ff21c6c4716c7580521fc29b7
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: "file:///C:/temp/OffNormalAlarmController.csv"
+  - Name: CharacterSeparator
+    Id: g=e6df51cdead50ae88856894bead98e7d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ";"
+  - Name: WrapFields
+    Id: g=96a25dbc05357778a9252a575064abbd
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: DigitalAlarm1
+  Id: g=67a4a18ca3574e1fa25cefae467819ff
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=7a1e9565fa454278cb0fe0bfbc9070e6
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=a18cd10cf87c6106389d6078ac537a39
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=1b533da4cdb8400284edc6643cbbbc65
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.0"
+  - Name: LastEvent
+    Id: g=972f32beb5e0023aa87bf4406019235f
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=4b33065db848e5c849d63192234a67bf
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 1"}
+  - Name: Enabled
+    Id: g=80b2a65dd01c4908049faded2320af04
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: DigitalAlarm2
+  Id: g=fae2de6d70624546bd23d016fde0ade7
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=e30d02cb47491b600ee809a0c0a24cc8
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=182fe7ebf18809493caccf2c3b8e5a49
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=62890c9f2a3444c0a805d50a860260c5
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.1"
+  - Name: LastEvent
+    Id: g=f1fdc6b6f92de659cbafe518cedf8199
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=b7ec19ef3fac765c18c58b63f95eea87
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 2"}
+- Name: DigitalAlarm3
+  Id: g=c359f98b28534d2e92fbf3c9618e4ebd
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=bbde2141f654aee361e026b5cc2ebf6c
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=de1cf127e9453a42f9b225494a6cc440
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=9956052ee09549a5913cb7d7ef87459a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.2"
+  - Name: LastEvent
+    Id: g=8a044eb15aef0002f3492210297e9f4c
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=2abbe7d550103f051301a8fc165adae9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 3"}
+- Name: DigitalAlarm4
+  Id: g=edc93028943043f1bdd71da5e44d7ad0
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=5d2dc4d5a34d1ec01d60007b242dbb78
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=3a79a6f5cce7c0863aafe8503802db91
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=655f06224c514892a3731f4cc9a2888b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.3"
+  - Name: LastEvent
+    Id: g=acbd3b61b660e99838aef368f0d7547a
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=3f7d4ac176cd6ddc5258e30f33e4e3c9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 4"}
+- Name: DigitalAlarm5
+  Id: g=8cd9684a6edb400daa2b6ebe94325665
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=2c6f234024f607ea8b1c26cf8e33ec7b
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=7bde4dd8bf5fbdfe2930e482023542b2
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=1833306beb1f44f282df7da1b5ff3ec2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.4"
+  - Name: LastEvent
+    Id: g=b9e6663cc277bad5afe5611e8cb74f56
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=99b647982aa18ea4757d40b9bf16ee76
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 5"}
+- Name: DigitalAlarm6
+  Id: g=6dc02f669cd9427b8f4e41c9db650cd2
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=d740cf91397e6cc679272d33a73072dc
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=1fc65a3bd91e2daac0a6acd74ea1420b
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=17130629bfc341c98e76d7a9009b1710
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.5"
+  - Name: LastEvent
+    Id: g=6f88bf2a6f287f37f1c9f910b4aa28a7
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=d26f047e2d64b50f5a54b42e4b6b4722
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 6"}
+- Name: DigitalAlarm7
+  Id: g=85fae5cfd8114a9cb96bb3418f859005
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=ea369e7ca036fe286ca0f7e53237961d
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=cd248b70e6b71d05effbe493b7271f2f
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=6a7c406a34d14556b5a27c460bc80905
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.6"
+  - Name: LastEvent
+    Id: g=7cbca98abede211385aafaf88840818b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=54a908c4a432f99e9fefb21a83f27575
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 7"}
+- Name: DigitalAlarm8
+  Id: g=11b4d516788b4c1f83f60b60e4526c5f
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=419c0a7cab223e3924d46a4b01966c4d
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=680aaebaaf9dc3d809aeddc4458591db
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=0b8e754aaa2a42e5bc6a414e26507aa3
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.7"
+  - Name: LastEvent
+    Id: g=b7b0ec78a5ef17380a28307f4c5cef26
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=a8af027c9cd97f4400524b400c87f25d
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 8"}
+- Name: DigitalAlarm9
+  Id: g=296ccc54d0b847de863897d9fb762f31
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=bf9328f0d7b70b3d76fc2eb0d6e2b5d1
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=1ac57f66bfc58627ec4ef2b37a8cf405
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=5bfecf3f7b6c4686a629f4a77dedb62d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.8"
+  - Name: LastEvent
+    Id: g=7d48f1662fc709f5ad01d0527cb99998
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=cdffe4d669f5451c57ee0995d52bd052
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 9"}
+- Name: DigitalAlarm10
+  Id: g=f3349477e0f3404fa8bd3af2c78305ad
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=e583d1e781749d21f1d0fb750efdc3c9
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=d96dcb63c2579ac464a11c7bbf111a4c
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=57f9a24391ae476db6f390b11c2b1092
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.9"
+  - Name: LastEvent
+    Id: g=618a89a83e500010b622ec0c70d20cad
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=b3b1f6d311a5597131a4b2183ed47f9a
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 10"}
+- Name: DigitalAlarm11
+  Id: g=528015e6bac54eec952c9f985433f93c
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=6a9014e9edf99f0d761aeba7dda27f61
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=6f2d87205de690a598bd99e3f240d8db
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=10806f6075974e9499c0cdc2592fc046
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.10"
+  - Name: LastEvent
+    Id: g=ab27013131f8039545fc644b37ddd6d0
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=3b97fafdc03d05a6695df3e3cdf97cf1
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 11"}
+- Name: DigitalAlarm12
+  Id: g=95b93ebbc13e463d95fe1e5c691e4354
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=8d4f9f1bd620ea6e91bb3a0e14d686ff
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=8f49bccee6bf067bd82d6399db6d3847
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=f18d4734becf4566bb56b1d1e20acbdc
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.11"
+  - Name: LastEvent
+    Id: g=af64f993c0ed4b306def673a4e3a1a97
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=60ec7702f75e3d60ffa9637f47c09878
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 12"}
+- Name: DigitalAlarm13
+  Id: g=8ae74c4286764b41831b532dd7d6cfd6
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=ca142bb74cdcbe7df4a4ecb3d34624ca
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=3c9c2bee7f91cc075641b50b018e7d79
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=0382c9c026494a10af708cd9e9a7c6e0
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.12"
+  - Name: LastEvent
+    Id: g=c4f088fb3337a89f3c9719a3c4e8478b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=ce0a7e5587ca786828f5cb22166877f8
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 13"}
+- Name: DigitalAlarm14
+  Id: g=155902d14e044f7993863499f6ce68ae
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=011ddc1ed6a57a43726f3f8670ba07ad
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=8e7fc47504d554cdfaf29d81f0d06607
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=78efe23cdb734b0e888305dcf2d9cabd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.13"
+  - Name: LastEvent
+    Id: g=36cbc44200190cbcb4a32631ec698e5d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=99ed89f3bd7610cf98f7a13d3cf85964
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 14"}
+- Name: DigitalAlarm15
+  Id: g=144c2629ce3c4ee3bb9444358d7b9545
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=3086804c0306976b0082ec6b7eb1abda
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=1f77566b3d0bc76da82c85eafbe2e84f
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=99151115ba8a44f9b168e72f11d43d08
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.14"
+  - Name: LastEvent
+    Id: g=6168adfedc5a93cf1c38da274313b383
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=2025a5987f19d028446450434369a941
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 15"}
+- Name: DigitalAlarm16
+  Id: g=6e873840a4c54b54a72870f98a9562f0
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=51feec0cad2f4caa4129dc5c27163e4d
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=74150719fa4fd4feb905678e03fb82e8
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=9c64fa2916f44a3ebe3f6c49208ff358
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FDAutomation_demo/CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1.15"
+  - Name: LastEvent
+    Id: g=16f6c46d8f4bb05b19f816008e5b2cfd
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=29;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=441e7c46066361eb422dd43e71453b72
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Allarme 16"}

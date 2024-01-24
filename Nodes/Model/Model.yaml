@@ -1,0 +1,26 @@
+Name: Model
+Id: g=ff92770a97469c6f723294198a272bc0
+Type: ModelCategoryFolder
+Children:
+- Name: Variable1
+  Id: g=8bee45e7f4ac319091fee16b129c96af
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: DynamicLink
+    Id: g=aee8d7cae57aca18ea4ff244ab719e2b
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../CommDrivers/CODESYSDriver1/CODESYSStation1/Tags/Application/PLC_PRG/b_1"
+    Children:
+    - Name: Mode
+      Id: g=5a1fe04dcbc343c212e2022ce7498c56
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Variable2
+  Id: g=2935d61a7c33ebb04c9a529e4aca4815
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
